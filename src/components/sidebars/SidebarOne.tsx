@@ -30,13 +30,13 @@ const SidebarOne = () => {
               >
                 <Link href={"/dashboard"}>Users</Link>
                 <ChevronDownIcon
-                  className={`w-5 h-5 transition-all duration-500 ease-in-out ${
+                  className={`w-5 h-5 transition-all duration-300 ease-in-out ${
                     open && "-rotate-180"
                   }`}
                 />
               </div>
               <div
-                className={`ml-5 max-h-0 overflow-hidden transition-all duration-500 ease-linear ${
+                className={`ml-5 max-h-0 overflow-hidden transition-all duration-300 ease-linear ${
                   open && "max-h-screen"
                 } `}
               >

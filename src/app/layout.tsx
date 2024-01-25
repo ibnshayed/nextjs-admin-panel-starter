@@ -1,4 +1,4 @@
-import ReduxProvider from "@/redux/ReduxProvider";
+import ReduxProvider from "@/redux/app/ReduxProvider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
