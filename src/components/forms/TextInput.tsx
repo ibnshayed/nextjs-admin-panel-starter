@@ -5,7 +5,6 @@ const Input = (
   { label, error, errors, onChange, onBlur, name, ...otherProps }: any,
   ref: any
 ) => {
-  console.log("🚀 ~ error:", error);
   return (
     <div className="space-y-1">
       <label className="block text-sm font-medium text-gray-700">{label}</label>
