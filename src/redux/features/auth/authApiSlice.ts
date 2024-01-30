@@ -16,8 +16,6 @@ export const authApiSlice = apiSlice.injectEndpoints({
           const { data } = await queryFulfilled;
           const userData = jwtDecode(data.result.accessToken);
 
-          localStorage.setItem("accessToken", data.result.accessToken);
-          localStorage.setItem("refreshToken", data.result.refreshToken);
           localStorage.setItem("user", JSON.stringify(userData));
 
 					setCookie("accessToken", data.result.accessToken);

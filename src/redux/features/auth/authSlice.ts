@@ -1,9 +1,11 @@
+import { LS } from "@/libs/ls";
 import { createSlice } from "@reduxjs/toolkit";
+import { getCookie } from "cookies-next";
 
 const initialState = {
-  accessToken: undefined,
-	refreshToken: undefined,
-	user: undefined,
+  accessToken: getCookie("accessToken") || undefined,
+  refreshToken: getCookie("refreshToken") || undefined,
+  user: JSON.parse(LS.get("user") || "{}"),
 };
 
 const authSlice = createSlice({

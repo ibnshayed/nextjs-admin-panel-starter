@@ -13,7 +13,9 @@ const DashboardLayout = ({
       </div>
       <div className="w-[calc(100vw_-280px)]">
         <HeaderOne />
-        <div className="bg-gray-100 p-5 h-screen overflow-hidden overflow-y-auto rounded-tl-3xl shadow-inner">{children}</div>
+        <div className="bg-gray-100 p-5 h-[calc(100vh_-_64px)] overflow-hidden overflow-y-auto rounded-tl-3xl shadow-inner">
+          {children}
+        </div>
       </div>
     </div>
   );

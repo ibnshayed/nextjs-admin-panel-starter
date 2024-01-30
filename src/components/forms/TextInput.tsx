@@ -1,14 +1,16 @@
+import cn from "@/libs/cn";
 import { ErrorMessage } from "@hookform/error-message";
 import { forwardRef } from "react";
 
 const Input = (
-  { label, error, errors, onChange, onBlur, name, ...otherProps }: any,
+  { label, errors, onChange, onBlur, name, className = "", ...otherProps }: any,
   ref: any
 ) => {
   return (
     <div className="space-y-1">
       <label className="block text-sm font-medium text-gray-700">{label}</label>
       <input
+        className={cn("", className)}
         name={name}
         ref={ref}
         onChange={onChange}

@@ -1,8 +1,9 @@
 "use client";
+import cn from "@/libs/cn";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { deleteCookie } from "cookies-next";
 import Link from "next/link";
-import { redirect, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { MouseEventHandler, useState } from "react";
 import Dropdown from "../dorpdowns/dropdown";
 
@@ -43,15 +44,21 @@ const SidebarOne = () => {
               >
                 <Link href={"/dashboard"}>Users</Link>
                 <ChevronDownIcon
-                  className={`w-5 h-5 transition-all duration-300 ease-in-out ${
-                    open && "-rotate-180"
-                  }`}
+                  className={cn(
+                    "w-5 h-5 transition-all duration-300 ease-in-out",
+                    {
+                      "-rotate-180": open,
+                    }
+                  )}
                 />
               </div>
               <div
-                className={`ml-5 max-h-0 overflow-hidden transition-all duration-300 ease-linear ${
-                  open && "max-h-screen"
-                } `}
+                className={cn(
+                  "ml-5 max-h-0 overflow-hidden transition-all duration-300 ease-linear",
+                  {
+                    "max-h-screen": open,
+                  }
+                )}
               >
                 <Link
                   href={"/dashboard/users/super-admin"}
